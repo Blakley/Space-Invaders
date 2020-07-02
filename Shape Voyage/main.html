@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Shape Voyage</title>
+</head>
+<body>
+    <!--Menu screen -->
+    <div id="Screen"> 
+        <div id = "Menu" data-tilt data-tilt-max="15"></div>
+        <div id = "optionsMenu" >
+            <p id="difficultyOption">Game Difficulty:
+                <input id="difficulty1" type="radio" name="difficulty" value="0"checked/>
+                <label for="difficulty1">Easy</label>
+                <input id="difficulty2" type="radio" name="difficulty" value="0"/>
+                <label for="difficulty2">Medium</label>
+                <input id="difficulty3" type="radio" name="difficulty" value="0"/>
+                <label for="difficulty3">Hard</label>
+            </p>
+            <p id="playerOption">Player Selection:
+                <input id="player1" type="radio" name="player"checked/>
+                <label for="player1">Circle</label>
+                <input id="player2" type="radio" name="player"/>
+                <label for="player2">Square</label>
+                <input id="player3" type="radio" name="player"/>
+                <label for="player3">Triangle</label>
+            </p>
+        </div>
+        <div id = "helpMenu" data-tilt data-tilt-max="15"></div>
+        <div id = "GameDiv"></div>   
+    </div>
+    
+    <div id ="gameTitleDiv"></div>
+    <div id = "menuBack"></div>
+    <div id = "deathScreen">
+        <div id = "failed">
+            <p id = "deathScreenText">YOU FAILED</p>
+        </div>
+        <div id = "progress">
+            <p class = "text-muted" id ="myProgress">SCORE: </p>
+        </div>
+        <div id = "deathButtons">
+            <button class = "returnToMenu">RETURN TO MENU</button>
+        </div>
+    </div>
+    <div id = "pauseScreen">
+        <div id = "paused"> <p>PAUSED</p> </div>
+        <div id = "pauseButtons">
+            <button class = "resumeGame" id ="resume">RESUME</button>
+            <button class = "quitGame" id = "quit">QUIT</button>
+        </div>        
+    </div>
+
+    <!-- Game setting divs -->
+    <div id ="GameImages"></div>
+    <div id="playerStats"></div>
+    <div id ="Effects"></div>
+    <div id ="gameText"></div>    
+    <div id="Debugger"></div>
+    
+    <!-- Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./Menu/vanilla-tilt.js"></script>
+
+    <!-- Load audio files -->
+    <audio id = "menuClick" src="./Audio/menuClick.wav"></audio>
+    <audio id = "menuHover" src="./Audio/menuHover.wav"></audio>
+    <audio id = "ballBounce" src="./Audio/BallBounce.wav"></audio>
+    <audio id = "introMusic" src="./Audio/IntroMusic.wav" loop="loop"></audio>
+    <audio id = "gameMusic" src="./Audio/gameMusic.wav" loop="loop"></audio>
+   
+    <!-- Javascript files -->
+    <script src="./Controller/Controller.js"></script>
+    <script src="./Menu/Menu.js"></script>
+    <script src="./Screen/Screen.js"></script>
+    <script src="./Actors/Actors.js"></script>
+    <script src="./Effects/Effects.js"></script>
+    <script src=".//Levels/Levels.js"></script>
+    <script src="./Debugger/Debugger.js"></script>
+    <script src="./Draw/Draw.js"></script>
+</body>
+</html>

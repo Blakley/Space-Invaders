@@ -1,0 +1,359 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
+
+/* Page CSS */
+*{
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    background-color:#323133;
+}
+
+#Screen {
+    position: relative;
+    left: 550px;
+    top: 50px;
+    width: 768px;
+    height: 900px;
+    background: white;
+    margin: -1px;
+    border: 1px solid black;
+    background-color: black;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+}
+
+#gameTitle {
+    position: relative;
+    bottom: 725px;
+    left: 725px;   
+}
+
+#Menu {
+    width: 768px;
+    height: 900px;
+}
+
+/* Menu CSS */
+#optionsDiv,
+#exitGameDiv, #newGameDiv, #helpDiv {
+    top: 330px;
+    font-size: 45px;
+    color: whitesmoke;
+    left: 293px;
+}
+
+#help:hover::before,#newGame:hover::before, #exitGame:hover::before,
+#options:hover::before{
+    content: ">";
+    margin-right: 10px;
+}
+
+#help:hover,#newGame:hover,#exitGame:hover,
+#options:hover {
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1s infinite;
+    animation-iteration-count: infinite;
+}
+
+#newGameDiv {
+    position: relative;
+    left: 293px;
+}
+
+#continueGameDiv {
+    position: relative;
+    left: 267px;
+}
+
+#optionsDiv {
+    position: relative;
+    left: 315px;
+}
+
+#helpDiv {
+    position: relative;
+    left: 340px;
+}
+
+#exitGameDiv {
+    position: relative;
+    left: 345px;
+}
+
+#Debugger {
+    position: relative;
+    bottom: 600px;
+    left: 130px;
+    font-size: 25px;
+    color: black;
+}
+
+#Debugger:hover {
+    cursor: pointer;
+}
+
+/* effect-shine */
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+p:hover, p:active {
+    color: #FFF; transform: skewX(1deg) translateX(5px); 
+    transform: skewX(1deg) translateX(-5px); 
+}
+p::before {
+    transform: scale(1); 
+}
+
+#gameText {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    white-space: nowrap;
+    text-shadow: 0 2px 2px rgba(#000, 0.9);
+}
+
+#_wKey{
+    color: white;
+    position: relative;
+    bottom: 488px; 
+    left: 190px;
+    font-size: 30px;  
+}
+#aKey{
+    color: white;
+    position: relative;
+    bottom: 488px; 
+    left: 190px;
+    font-size: 30px;  
+}
+#dKey{
+    color: white;
+    position: relative;
+    bottom: 488px;
+    left: 190px;
+    font-size: 30px;  
+}
+#pKey{
+    color: white;
+    position: relative;
+    bottom: 488px;
+    left: 190px;
+    font-size: 30px;  
+}
+
+#keyBoardIcons {
+    position: relative;
+    bottom: -70px;
+    left: 25px;  
+}
+
+#_wKey:hover, #aKey:hover,#dKey:hover,#pKey:hover{
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+    animation-iteration-count: infinite;
+}
+
+#backArrow {
+    z-index: 0;
+    position:absolute;
+    bottom: 70px;
+    left: 600px;
+}
+
+#backArrow:hover {
+    cursor: pointer;
+}
+
+
+#optionsMenu {
+    position: relative;
+    top: 340px;
+    left: 110px;
+    color: white;
+    font-size: 30px; 
+}
+
+#optionsMenu input {
+    display:none;
+}
+
+#optionsMenu input:checked + label {
+    background-color: #FFF;
+    color: #000;
+    margin: 5px;
+}
+
+#difficultyOption:hover, #playerOption:hover {
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+    animation-iteration-count: infinite;
+}
+
+#difficultyOption, #playerOption {
+    font-size: 40px;
+}
+
+#deathScreen {
+    color: whitesmoke;
+    position: relative;
+    bottom: 600px;
+    left: 830px;
+}
+
+#failed {
+    font-size: 50px;
+}
+
+#progress {
+    font-size: 20px;
+    position: relative;
+    left: 45px;
+    bottom: 30px;
+    color: dimgrey;
+}
+
+button {
+    color: white;
+    background-color: #323133;
+    border-color: black;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    max-width: 350px;
+    position: relative;
+    right: 70px;
+}
+
+.continueTheGame:hover, .returnToMenu:hover{
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1s infinite;
+    animation-iteration-count: infinite;
+}
+
+.returnToMenu {
+    position: relative;
+    top: 5px;
+    font-size: 25px;
+}
+
+#failed {
+    cursor: pointer;
+}
+
+#pauseScreen {
+    position: relative;
+    bottom: 600px;
+    left: 810px;
+}
+
+#pauseButtons {
+    max-width: 330px;
+}
+
+#paused:hover{
+    cursor: pointer;
+}
+
+#resume, #quit {
+    font-size: 30px;
+}
+
+#resume:hover, #quit:hover, #pointValue:hover {
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1s infinite;
+    animation-iteration-count: infinite;    
+}
+
+#paused {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+    animation-iteration-count: infinite;
+    color: yellow;
+    font-size: 50px;
+    position: relative;
+    left: 23px;
+}
+
+#pointValue1 {
+    color: white;
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    bottom: 400px;
+    left: 175px;
+}
+
+#pointValue2 {
+    color: white;
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    bottom: 400px;
+    left: 245px;
+}
+
+#pointValue3 {
+    color: white;
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    bottom: 400px;
+    left: 295px;
+}
+
+#pointValue4 {
+    color: white;
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    bottom: 400px;
+    left: 355px;
+}
+
+#pointValue1:hover,#pointValue2:hover,#pointValue3:hover,#pointValue4:hover{
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(214, 5, 5, 0.6) 30%, rgb(0, 83, 179) 50%, rgba(212, 212, 212, 0.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1s infinite;
+    animation-iteration-count: infinite; 
+}
+
+#playerStats {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    bottom: 840px;
+    left: 600px;
+}
+
+#playerScore {
+    position: relative;
+    bottom: 5px;
+}
+
+#playerLives {
+    position: relative;
+    bottom: 66px;
+    left: 570px;
+}
